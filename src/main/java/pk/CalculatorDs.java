@@ -2,7 +2,7 @@ package pk;
 import java.util.*;
 import java.util.logging.Logger;
 
-abstract class calculator{
+abstract class Calculator{
     private static final Logger LOGGER =  Logger.getLogger("InfoLogging");
     private int value;
     abstract void add(int value);
@@ -19,7 +19,7 @@ abstract class calculator{
     }
 }
 
-public class CalculatorDs extends calculator{
+public class CalculatorDs extends Calculator{
     void add(int value){
         setValue(getValue()+value);
     }
@@ -36,7 +36,7 @@ public class CalculatorDs extends calculator{
         setValue(getValue()%value);
     }
     private static final Logger LOGGER =  Logger.getLogger("InfoLogging");
-    static calculator c = new CalculatorDs();
+    static Calculator c = new CalculatorDs();
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int n = 0;
