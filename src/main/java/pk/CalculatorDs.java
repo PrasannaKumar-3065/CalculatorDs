@@ -3,51 +3,28 @@ package pk;
 import java.util.*;
 import java.util.logging.Logger;
 
-abstract class Calculator {
-    private static final Logger LOGGER = Logger.getLogger("InfoLogging");
-    private double value;
-
-    abstract void add(double value);
-
-    abstract void sub(double value);
-
-    abstract void mul(double value);
-
-    abstract void div(double value);
-
-    abstract void rem(double value);
-
-    public double getValue() {
-        return value;
-    }
-
-    public void setValue(double val) {
-        value = val;
-    }
-}
-
 public class CalculatorDs extends Calculator {
-    void add(double value) {
+    public void add(double value) {
         setValue(getValue() + value);
     }
 
-    void sub(double value) {
+    public void sub(double value) {
         setValue(getValue() - value);
     }
 
-    void mul(double value) {
+    public void mul(double value) {
         setValue(getValue() * value);
     }
 
-    void div(double value) {
+    public void div(double value) {
         setValue(getValue() / value);
     }
 
-    void rem(double value) {
+    public void rem(double value) {
         setValue(getValue() % value);
     }
 
-    static void prdouble() {
+    public static void prdouble() {
         String s = "Result: " + c.getValue();
         LOGGER.info(s);
     }
